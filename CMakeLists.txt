@@ -12,7 +12,7 @@ enable_testing()
 # copy CTestCustom.cmake to build dir to disable long running tests in 'make test'
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CTestCustom.cmake ${CMAKE_CURRENT_BINARY_DIR})
 
-project(Karbowanec)
+project(CrayCoin)
 
 include_directories(include src external "${CMAKE_CURRENT_BINARY_DIR}/version")
 if(APPLE)
@@ -167,6 +167,12 @@ else()
   endif()
 endif()
 
+SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/boost_1_66_0")
+SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/boost_1_66_0")
+SET(BOOST_LIBRARYDIR "C:/boost_1_66_0/stage/lib")
+SET(Boost_DEBUG ON)
+
+
 if(STATIC)
   set(Boost_USE_STATIC_LIBS ON)
   set(Boost_USE_STATIC_RUNTIME ON)
@@ -180,6 +186,10 @@ elseif(APPLE)
 elseif(NOT MSVC)
   set(Boost_LIBRARIES "${Boost_LIBRARIES};rt")
 endif()
+
+
+
+
 
 set(COMMIT_ID_IN_VERSION ON CACHE BOOL "Include commit ID in version")
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/version")

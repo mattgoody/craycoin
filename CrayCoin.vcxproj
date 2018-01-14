@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1313B815-4934-4868-8D07-9D342976B1AB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cmake\test-static-assert.c" />
+    <ClCompile Include="cmake\test-static-assert.cpp" />
+    <ClCompile Include="external\gtest\codegear\gtest_all.cc" />
+    <ClCompile Include="external\gtest\codegear\gtest_link.cc" />
+    <ClCompile Include="external\gtest\fused-src\gtest\gtest-all.cc" />
+    <ClCompile Include="external\gtest\fused-src\gtest\gtest_main.cc" />
+    <ClCompile Include="external\gtest\samples\sample1.cc" />
+    <ClCompile Include="external\gtest\samples\sample10_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample1_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample2.cc" />
+    <ClCompile Include="external\gtest\samples\sample2_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample3_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample4.cc" />
+    <ClCompile Include="external\gtest\samples\sample4_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample5_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample6_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample7_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample8_unittest.cc" />
+    <ClCompile Include="external\gtest\samples\sample9_unittest.cc" />
+    <ClCompile Include="external\gtest\src\gtest-all.cc" />
+    <ClCompile Include="external\gtest\src\gtest-death-test.cc" />
+    <ClCompile Include="external\gtest\src\gtest-filepath.cc" />
+    <ClCompile Include="external\gtest\src\gtest-port.cc" />
+    <ClCompile Include="external\gtest\src\gtest-printers.cc" />
+    <ClCompile Include="external\gtest\src\gtest-test-part.cc" />
+    <ClCompile Include="external\gtest\src\gtest-typed-test.cc" />
+    <ClCompile Include="external\gtest\src\gtest.cc" />
+    <ClCompile Include="external\gtest\src\gtest_main.cc" />
+    <ClCompile Include="external\gtest\test\gtest-death-test_ex_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-death-test_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-filepath_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-linked_ptr_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-listener_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-message_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-options_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-param-test2_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-param-test_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-port_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-printers_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-test-part_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-tuple_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-typed-test2_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-typed-test_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest-unittest-api_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_all_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_break_on_failure_unittest_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_catch_exceptions_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_color_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_environment_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_env_var_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_filter_unittest_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_help_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_list_tests_unittest_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_main_unittest.cc" />
+    <ClCompile Include="external\gtest\test\gtest_no_test_unittest.cc" />
+    <ClCompile Include="external\gtest\test\gtest_output_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_pred_impl_unittest.cc" />
+    <ClCompile Include="external\gtest\test\gtest_premature_exit_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_prod_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_repeat_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_shuffle_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_sole_header_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_stress_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_throw_on_failure_ex_test.cc" />
+    <ClCompile Include="external\gtest\test\gtest_throw_on_failure_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_uninitialized_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_unittest.cc" />
+    <ClCompile Include="external\gtest\test\gtest_xml_outfile1_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_xml_outfile2_test_.cc" />
+    <ClCompile Include="external\gtest\test\gtest_xml_output_unittest_.cc" />
+    <ClCompile Include="external\gtest\test\production.cc" />
+    <ClCompile Include="external\gtest\xcode\samples\frameworksample\widget.cc" />
+    <ClCompile Include="external\gtest\xcode\samples\frameworksample\widget_test.cc" />
+    <ClCompile Include="external\miniupnpc\connecthostport.c" />
+    <ClCompile Include="external\miniupnpc\igd_desc_parse.c" />
+    <ClCompile Include="external\miniupnpc\minihttptestserver.c" />
+    <ClCompile Include="external\miniupnpc\minisoap.c" />
+    <ClCompile Include="external\miniupnpc\minissdpc.c" />
+    <ClCompile Include="external\miniupnpc\miniupnpc.c" />
+    <ClCompile Include="external\miniupnpc\miniupnpcmodule.c" />
+    <ClCompile Include="external\miniupnpc\miniwget.c" />
+    <ClCompile Include="external\miniupnpc\minixml.c" />
+    <ClCompile Include="external\miniupnpc\minixmlvalid.c" />
+    <ClCompile Include="external\miniupnpc\portlistingparse.c" />
+    <ClCompile Include="external\miniupnpc\receivedata.c" />
+    <ClCompile Include="external\miniupnpc\testigddescparse.c" />
+    <ClCompile Include="external\miniupnpc\testminiwget.c" />
+    <ClCompile Include="external\miniupnpc\testminixml.c" />
+    <ClCompile Include="external\miniupnpc\testupnpreplyparse.c" />
+    <ClCompile Include="external\miniupnpc\upnpc.c" />
+    <ClCompile Include="external\miniupnpc\upnpcommands.c" />
+    <ClCompile Include="external\miniupnpc\upnperrors.c" />
+    <ClCompile Include="external\miniupnpc\upnpreplyparse.c" />
+    <ClCompile Include="external\miniupnpc\wingenminiupnpcstrings.c" />
+    <ClCompile Include="src\blockchainexplorer\BlockchainExplorer.cpp" />
+    <ClCompile Include="src\blockchainexplorer\BlockchainExplorerDataBuilder.cpp" />
+    <ClCompile Include="src\blockchainexplorer\BlockchainExplorerErrors.cpp" />
+    <ClCompile Include="src\common\Base58.cpp" />
+    <ClCompile Include="src\common\BlockingQueue.cpp" />
+    <ClCompile Include="src\common\CommandLine.cpp" />
+    <ClCompile Include="src\common\ConsoleHandler.cpp" />
+    <ClCompile Include="src\common\ConsoleTools.cpp" />
+    <ClCompile Include="src\common\FileMappedVector.cpp" />
+    <ClCompile Include="src\common\IInputStream.cpp" />
+    <ClCompile Include="src\common\IOutputStream.cpp" />
+    <ClCompile Include="src\common\JsonValue.cpp" />
+    <ClCompile Include="src\common\Math.cpp" />
+    <ClCompile Include="src\common\MemoryInputStream.cpp" />
+    <ClCompile Include="src\common\PathTools.cpp" />
+    <ClCompile Include="src\common\ScopeExit.cpp" />
+    <ClCompile Include="src\common\SignalHandler.cpp" />
+    <ClCompile Include="src\common\StdInputStream.cpp" />
+    <ClCompile Include="src\common\StdOutputStream.cpp" />
+    <ClCompile Include="src\common\StreamTools.cpp" />
+    <ClCompile Include="src\common\StringInputStream.cpp" />
+    <ClCompile Include="src\common\StringOutputStream.cpp" />
+    <ClCompile Include="src\common\StringTools.cpp" />
+    <ClCompile Include="src\common\StringView.cpp" />
+    <ClCompile Include="src\common\Util.cpp" />
+    <ClCompile Include="src\common\VectorOutputStream.cpp" />
+    <ClCompile Include="src\connectivitytool\ConnectivityTool.cpp" />
+    <ClCompile Include="src\cryptonotecore\Account.cpp" />
+    <ClCompile Include="src\cryptonotecore\Blockchain.cpp" />
+    <ClCompile Include="src\cryptonotecore\BlockchainIndices.cpp" />
+    <ClCompile Include="src\cryptonotecore\BlockchainMessages.cpp" />
+    <ClCompile Include="src\cryptonotecore\BlockIndex.cpp" />
+    <ClCompile Include="src\cryptonotecore\Checkpoints.cpp" />
+    <ClCompile Include="src\cryptonotecore\Core.cpp" />
+    <ClCompile Include="src\cryptonotecore\CoreConfig.cpp" />
+    <ClCompile Include="src\cryptonotecore\CryptoNoteBasic.cpp" />
+    <ClCompile Include="src\cryptonotecore\CryptoNoteBasicImpl.cpp" />
+    <ClCompile Include="src\cryptonotecore\CryptoNoteFormatUtils.cpp" />
+    <ClCompile Include="src\cryptonotecore\CryptoNoteSerialization.cpp" />
+    <ClCompile Include="src\cryptonotecore\CryptoNoteTools.cpp" />
+    <ClCompile Include="src\cryptonotecore\Currency.cpp" />
+    <ClCompile Include="src\cryptonotecore\Difficulty.cpp" />
+    <ClCompile Include="src\cryptonotecore\IBlock.cpp" />
+    <ClCompile Include="src\cryptonotecore\ITimeProvider.cpp" />
+    <ClCompile Include="src\cryptonotecore\Miner.cpp" />
+    <ClCompile Include="src\cryptonotecore\MinerConfig.cpp" />
+    <ClCompile Include="src\cryptonotecore\SwappedMap.cpp" />
+    <ClCompile Include="src\cryptonotecore\SwappedVector.cpp" />
+    <ClCompile Include="src\cryptonotecore\Transaction.cpp" />
+    <ClCompile Include="src\cryptonotecore\TransactionExtra.cpp" />
+    <ClCompile Include="src\cryptonotecore\TransactionPool.cpp" />
+    <ClCompile Include="src\cryptonotecore\TransactionPrefixImpl.cpp" />
+    <ClCompile Include="src\cryptonotecore\TransactionUtils.cpp" />
+    <ClCompile Include="src\cryptonotecore\UpgradeDetector.cpp" />
+    <ClCompile Include="src\cryptonoteprotocol\CryptoNoteProtocolHandler.cpp" />
+    <ClCompile Include="src\crypto\blake256.c" />
+    <ClCompile Include="src\crypto\chacha8.c" />
+    <ClCompile Include="src\crypto\crypto-ops-data.c" />
+    <ClCompile Include="src\crypto\crypto-ops.c" />
+    <ClCompile Include="src\crypto\crypto.cpp" />
+    <ClCompile Include="src\crypto\groestl.c" />
+    <ClCompile Include="src\crypto\hash-extra-blake.c" />
+    <ClCompile Include="src\crypto\hash-extra-groestl.c" />
+    <ClCompile Include="src\crypto\hash-extra-jh.c" />
+    <ClCompile Include="src\crypto\hash-extra-skein.c" />
+    <ClCompile Include="src\crypto\hash.c" />
+    <ClCompile Include="src\crypto\jh.c" />
+    <ClCompile Include="src\crypto\keccak.c" />
+    <ClCompile Include="src\crypto\oaes_lib.c" />
+    <ClCompile Include="src\crypto\random.c" />
+    <ClCompile Include="src\crypto\skein.c" />
+    <ClCompile Include="src\crypto\slow-hash.c" />
+    <ClCompile Include="src\crypto\slow-hash.cpp" />
+    <ClCompile Include="src\crypto\tree-hash.c" />
+    <ClCompile Include="src\daemon\Daemon.cpp" />
+    <ClCompile Include="src\daemon\DaemonCommandsHandler.cpp" />
+    <ClCompile Include="src\http\HttpParser.cpp" />
+    <ClCompile Include="src\http\HttpParserErrorCodes.cpp" />
+    <ClCompile Include="src\http\HttpRequest.cpp" />
+    <ClCompile Include="src\http\HttpResponse.cpp" />
+    <ClCompile Include="src\inprocessnode\InProcessNode.cpp" />
+    <ClCompile Include="src\inprocessnode\InProcessNodeErrors.cpp" />
+    <ClCompile Include="src\jsonrpcserver\JsonRpcServer.cpp" />
+    <ClCompile Include="src\logging\CommonLogger.cpp" />
+    <ClCompile Include="src\logging\ConsoleLogger.cpp" />
+    <ClCompile Include="src\logging\FileLogger.cpp" />
+    <ClCompile Include="src\logging\ILogger.cpp" />
+    <ClCompile Include="src\logging\LoggerGroup.cpp" />
+    <ClCompile Include="src\logging\LoggerManager.cpp" />
+    <ClCompile Include="src\logging\LoggerMessage.cpp" />
+    <ClCompile Include="src\logging\LoggerRef.cpp" />
+    <ClCompile Include="src\logging\StreamLogger.cpp" />
+    <ClCompile Include="src\miner\BlockchainMonitor.cpp" />
+    <ClCompile Include="src\miner\main.cpp" />
+    <ClCompile Include="src\miner\Miner.cpp" />
+    <ClCompile Include="src\miner\MinerManager.cpp" />
+    <ClCompile Include="src\miner\MiningConfig.cpp" />
+    <ClCompile Include="src\mnemonics\electrum-words.cpp" />
+    <ClCompile Include="src\noderpcproxy\NodeErrors.cpp" />
+    <ClCompile Include="src\noderpcproxy\NodeRpcProxy.cpp" />
+    <ClCompile Include="src\p2p\IP2pNodeInternal.cpp" />
+    <ClCompile Include="src\p2p\LevinProtocol.cpp" />
+    <ClCompile Include="src\p2p\NetNode.cpp" />
+    <ClCompile Include="src\p2p\NetNodeConfig.cpp" />
+    <ClCompile Include="src\p2p\P2pConnectionProxy.cpp" />
+    <ClCompile Include="src\p2p\P2pContext.cpp" />
+    <ClCompile Include="src\p2p\P2pContextOwner.cpp" />
+    <ClCompile Include="src\p2p\P2pInterfaces.cpp" />
+    <ClCompile Include="src\p2p\P2pNode.cpp" />
+    <ClCompile Include="src\p2p\P2pNodeConfig.cpp" />
+    <ClCompile Include="src\p2p\PeerListManager.cpp" />
+    <ClCompile Include="src\paymentgateservice\ConfigurationManager.cpp" />
+    <ClCompile Include="src\paymentgateservice\main.cpp" />
+    <ClCompile Include="src\paymentgateservice\PaymentGateService.cpp" />
+    <ClCompile Include="src\paymentgateservice\PaymentServiceConfiguration.cpp" />
+    <ClCompile Include="src\paymentgateservice\RpcNodeConfiguration.cpp" />
+    <ClCompile Include="src\paymentgate\NodeFactory.cpp" />
+    <ClCompile Include="src\paymentgate\PaymentServiceJsonRpcMessages.cpp" />
+    <ClCompile Include="src\paymentgate\PaymentServiceJsonRpcServer.cpp" />
+    <ClCompile Include="src\paymentgate\WalletService.cpp" />
+    <ClCompile Include="src\paymentgate\WalletServiceErrorCategory.cpp" />
+    <ClCompile Include="src\platform\linux\system\Dispatcher.cpp" />
+    <ClCompile Include="src\platform\linux\system\ErrorMessage.cpp" />
+    <ClCompile Include="src\platform\linux\system\Ipv4Resolver.cpp" />
+    <ClCompile Include="src\platform\linux\system\TcpConnection.cpp" />
+    <ClCompile Include="src\platform\linux\system\TcpConnector.cpp" />
+    <ClCompile Include="src\platform\linux\system\TcpListener.cpp" />
+    <ClCompile Include="src\platform\linux\system\Timer.cpp" />
+    <ClCompile Include="src\platform\osx\system\Context.c" />
+    <ClCompile Include="src\platform\osx\system\Dispatcher.cpp" />
+    <ClCompile Include="src\platform\osx\system\ErrorMessage.cpp" />
+    <ClCompile Include="src\platform\osx\system\Ipv4Resolver.cpp" />
+    <ClCompile Include="src\platform\osx\system\TcpConnection.cpp" />
+    <ClCompile Include="src\platform\osx\system\TcpConnector.cpp" />
+    <ClCompile Include="src\platform\osx\system\TcpListener.cpp" />
+    <ClCompile Include="src\platform\osx\system\Timer.cpp" />
+    <ClCompile Include="src\platform\posix\system\MemoryMappedFile.cpp" />
+    <ClCompile Include="src\platform\windows\system\Dispatcher.cpp" />
+    <ClCompile Include="src\platform\windows\system\ErrorMessage.cpp" />
+    <ClCompile Include="src\platform\windows\system\Ipv4Resolver.cpp" />
+    <ClCompile Include="src\platform\windows\system\MemoryMappedFile.cpp" />
+    <ClCompile Include="src\platform\windows\system\TcpConnection.cpp" />
+    <ClCompile Include="src\platform\windows\system\TcpConnector.cpp" />
+    <ClCompile Include="src\platform\windows\system\TcpListener.cpp" />
+    <ClCompile Include="src\platform\windows\system\Timer.cpp" />
+    <ClCompile Include="src\rpc\HttpClient.cpp" />
+    <ClCompile Include="src\rpc\HttpServer.cpp" />
+    <ClCompile Include="src\rpc\JsonRpc.cpp" />
+    <ClCompile Include="src\rpc\RpcServer.cpp" />
+    <ClCompile Include="src\rpc\RpcServerConfig.cpp" />
+    <ClCompile Include="src\serialization\BinaryInputStreamSerializer.cpp" />
+    <ClCompile Include="src\serialization\BinaryOutputStreamSerializer.cpp" />
+    <ClCompile Include="src\serialization\JsonInputStreamSerializer.cpp" />
+    <ClCompile Include="src\serialization\JsonInputValueSerializer.cpp" />
+    <ClCompile Include="src\serialization\JsonOutputStreamSerializer.cpp" />
+    <ClCompile Include="src\serialization\KVBinaryInputStreamSerializer.cpp" />
+    <ClCompile Include="src\serialization\KVBinaryOutputStreamSerializer.cpp" />
+    <ClCompile Include="src\serialization\MemoryStream.cpp" />
+    <ClCompile Include="src\serialization\SerializationOverloads.cpp" />
+    <ClCompile Include="src\simplewallet\PasswordContainer.cpp" />
+    <ClCompile Include="src\simplewallet\SimpleWallet.cpp" />
+    <ClCompile Include="src\system\ContextGroup.cpp" />
+    <ClCompile Include="src\system\ContextGroupTimeout.cpp" />
+    <ClCompile Include="src\system\Event.cpp" />
+    <ClCompile Include="src\system\EventLock.cpp" />
+    <ClCompile Include="src\system\InterruptedException.cpp" />
+    <ClCompile Include="src\system\Ipv4Address.cpp" />
+    <ClCompile Include="src\system\RemoteEventLock.cpp" />
+    <ClCompile Include="src\system\TcpStream.cpp" />
+    <ClCompile Include="src\transfers\BlockchainSynchronizer.cpp" />
+    <ClCompile Include="src\transfers\SynchronizationState.cpp" />
+    <ClCompile Include="src\transfers\TransfersConsumer.cpp" />
+    <ClCompile Include="src\transfers\TransfersContainer.cpp" />
+    <ClCompile Include="src\transfers\TransfersSubscription.cpp" />
+    <ClCompile Include="src\transfers\TransfersSynchronizer.cpp" />
+    <ClCompile Include="src\walletlegacy\KeysStorage.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletHelper.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletLegacy.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletLegacySerialization.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletLegacySerializer.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletTransactionSender.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletUnconfirmedTransactions.cpp" />
+    <ClCompile Include="src\walletlegacy\WalletUserTransactionsCache.cpp" />
+    <ClCompile Include="src\wallet\LegacyKeysImporter.cpp" />
+    <ClCompile Include="src\wallet\WalletAsyncContextCounter.cpp" />
+    <ClCompile Include="src\wallet\WalletErrors.cpp" />
+    <ClCompile Include="src\wallet\WalletGreen.cpp" />
+    <ClCompile Include="src\wallet\WalletRpcServer.cpp" />
+    <ClCompile Include="src\wallet\WalletSerializationV1.cpp" />
+    <ClCompile Include="src\wallet\WalletSerializationV2.cpp" />
+    <ClCompile Include="src\wallet\WalletUtils.cpp" />
+    <ClCompile Include="tests\coretests\BlockReward.cpp" />
+    <ClCompile Include="tests\coretests\BlockValidation.cpp" />
+    <ClCompile Include="tests\coretests\Chaingen.cpp" />
+    <ClCompile Include="tests\coretests\Chaingen001.cpp" />
+    <ClCompile Include="tests\coretests\ChaingenMain.cpp" />
+    <ClCompile Include="tests\coretests\ChainSplit1.cpp" />
+    <ClCompile Include="tests\coretests\ChainSwitch1.cpp" />
+    <ClCompile Include="tests\coretests\DoubleSpend.cpp" />
+    <ClCompile Include="tests\coretests\IntegerOverflow.cpp" />
+    <ClCompile Include="tests\coretests\RandomOuts.cpp" />
+    <ClCompile Include="tests\coretests\RingSignature.cpp" />
+    <ClCompile Include="tests\coretests\TransactionBuilder.cpp" />
+    <ClCompile Include="tests\coretests\TransactionTests.cpp" />
+    <ClCompile Include="tests\coretests\TransactionValidation.cpp" />
+    <ClCompile Include="tests\coretests\Upgrade.cpp" />
+    <ClCompile Include="tests\crypto\crypto-ops-data.c" />
+    <ClCompile Include="tests\crypto\crypto-ops.c" />
+    <ClCompile Include="tests\crypto\crypto.cpp" />
+    <ClCompile Include="tests\crypto\hash.c" />
+    <ClCompile Include="tests\crypto\main.cpp" />
+    <ClCompile Include="tests\crypto\random.c" />
+    <ClCompile Include="tests\difficulty\Difficulty.cpp" />
+    <ClCompile Include="tests\HashTarget.cpp" />
+    <ClCompile Include="tests\hash\main.cpp" />
+    <ClCompile Include="tests\integrationtestlib\BaseFunctionalTests.cpp" />
+    <ClCompile Include="tests\integrationtestlib\InProcTestNode.cpp" />
+    <ClCompile Include="tests\integrationtestlib\Logger.cpp" />
+    <ClCompile Include="tests\integrationtestlib\Process.cpp" />
+    <ClCompile Include="tests\integrationtestlib\RPCTestNode.cpp" />
+    <ClCompile Include="tests\integrationtestlib\TestNetwork.cpp" />
+    <ClCompile Include="tests\integrationtestlib\TestWalletLegacy.cpp" />
+    <ClCompile Include="tests\integrationtests\IntegrationTests.cpp" />
+    <ClCompile Include="tests\integrationtests\main.cpp" />
+    <ClCompile Include="tests\integrationtests\MultiVersion.cpp" />
+    <ClCompile Include="tests\integrationtests\Node.cpp" />
+    <ClCompile Include="tests\integrationtests\WalletLegacyTests.cpp" />
+    <ClCompile Include="tests\noderpcproxytests\NodeRpcProxyTests.cpp" />
+    <ClCompile Include="tests\performancetests\main.cpp" />
+    <ClCompile Include="tests\system\ContextGroupTests.cpp" />
+    <ClCompile Include="tests\system\ContextGroupTimeoutTests.cpp" />
+    <ClCompile Include="tests\system\ContextTests.cpp" />
+    <ClCompile Include="tests\system\DispatcherTests.cpp" />
+    <ClCompile Include="tests\system\ErrorMessageTests.cpp" />
+    <ClCompile Include="tests\system\EventLockTests.cpp" />
+    <ClCompile Include="tests\system\EventTests.cpp" />
+    <ClCompile Include="tests\system\Ipv4AddressTests.cpp" />
+    <ClCompile Include="tests\system\Ipv4ResolverTests.cpp" />
+    <ClCompile Include="tests\system\main.cpp" />
+    <ClCompile Include="tests\system\OperationTimeoutTests.cpp" />
+    <ClCompile Include="tests\system\RemoteContextTests.cpp" />
+    <ClCompile Include="tests\system\TcpConnectionTests.cpp" />
+    <ClCompile Include="tests\system\TcpConnectorTests.cpp" />
+    <ClCompile Include="tests\system\TcpListenerTests.cpp" />
+    <ClCompile Include="tests\system\TimerTests.cpp" />
+    <ClCompile Include="tests\testgenerator\TestGenerator.cpp" />
+    <ClCompile Include="tests\transferstests\main.cpp" />
+    <ClCompile Include="tests\transferstests\TestNodeRpcProxy.cpp" />
+    <ClCompile Include="tests\transferstests\Tests.cpp" />
+    <ClCompile Include="tests\transferstests\TestTxPoolSync.cpp" />
+    <ClCompile Include="tests\unittests\ArrayRefTests.cpp" />
+    <ClCompile Include="tests\unittests\ArrayViewTests.cpp" />
+    <ClCompile Include="tests\unittests\Base58.cpp" />
+    <ClCompile Include="tests\unittests\BinarySerializationCompatibility.cpp" />
+    <ClCompile Include="tests\unittests\BlockingQueue.cpp" />
+    <ClCompile Include="tests\unittests\BlockReward.cpp" />
+    <ClCompile Include="tests\unittests\Chacha8.cpp" />
+    <ClCompile Include="tests\unittests\Checkpoints.cpp" />
+    <ClCompile Include="tests\unittests\DecomposeAmountIntoDigits.cpp" />
+    <ClCompile Include="tests\unittests\EventWaiter.cpp" />
+    <ClCompile Include="tests\unittests\ICoreStub.cpp" />
+    <ClCompile Include="tests\unittests\ICryptoNoteProtocolQueryStub.cpp" />
+    <ClCompile Include="tests\unittests\INodeStubs.cpp" />
+    <ClCompile Include="tests\unittests\main.cpp" />
+    <ClCompile Include="tests\unittests\MulDiv.cpp" />
+    <ClCompile Include="tests\unittests\ParseAmount.cpp" />
+    <ClCompile Include="tests\unittests\PaymentGateTests.cpp" />
+    <ClCompile Include="tests\unittests\Serialization.cpp" />
+    <ClCompile Include="tests\unittests\SerializationKV.cpp" />
+    <ClCompile Include="tests\unittests\Shuffle.cpp" />
+    <ClCompile Include="tests\unittests\StringBufferTests.cpp" />
+    <ClCompile Include="tests\unittests\StringViewTests.cpp" />
+    <ClCompile Include="tests\unittests\TestBcS.cpp" />
+    <ClCompile Include="tests\unittests\TestBlockchainExplorer.cpp" />
+    <ClCompile Include="tests\unittests\TestBlockchainGenerator.cpp" />
+    <ClCompile Include="tests\unittests\TestCurrency.cpp" />
+    <ClCompile Include="tests\unittests\TestFileMappedVector.cpp" />
+    <ClCompile Include="tests\unittests\TestFormatUtils.cpp" />
+    <ClCompile Include="tests\unittests\TestInprocessNode.cpp" />
+    <ClCompile Include="tests\unittests\TestJsonValue.cpp" />
+    <ClCompile Include="tests\unittests\TestMessageQueue.cpp" />
+    <ClCompile Include="tests\unittests\TestPath.cpp" />
+    <ClCompile Include="tests\unittests\TestPeerlist.cpp" />
+    <ClCompile Include="tests\unittests\TestProtocolPack.cpp" />
+    <ClCompile Include="tests\unittests\TestTransactionPoolDetach.cpp" />
+    <ClCompile Include="tests\unittests\TestTransfers.cpp" />
+    <ClCompile Include="tests\unittests\TestTransfersConsumer.cpp" />
+    <ClCompile Include="tests\unittests\TestTransfersContainer.cpp" />
+    <ClCompile Include="tests\unittests\TestTransfersContainerKeyImage.cpp" />
+    <ClCompile Include="tests\unittests\TestTransfersSubscription.cpp" />
+    <ClCompile Include="tests\unittests\TestUpgradeDetector.cpp" />
+    <ClCompile Include="tests\unittests\TestWallet.cpp" />
+    <ClCompile Include="tests\unittests\TestWalletLegacy.cpp" />
+    <ClCompile Include="tests\unittests\TestWalletService.cpp" />
+    <ClCompile Include="tests\unittests\TransactionApi.cpp" />
+    <ClCompile Include="tests\unittests\TransactionApiHelpers.cpp" />
+    <ClCompile Include="tests\unittests\TransactionPool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="external\miniupnpc\miniupnpc.def" />
+    <None Include="src\crypto\slow-hash.inl" />
+    <None Include="tests\coretests\double_spend.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="external\google\sparsehash\densehashtable.h" />
+    <ClInclude Include="external\google\sparsehash\hashtable-common.h" />
+    <ClInclude Include="external\google\sparsehash\libc_allocator_with_realloc.h" />
+    <ClInclude Include="external\google\sparsehash\os_config.h" />
+    <ClInclude Include="external\google\sparsehash\sparseconfig.h" />
+    <ClInclude Include="external\google\sparsehash\sparseconfig_win.h" />
+    <ClInclude Include="external\google\sparsehash\sparsehashtable.h" />
+    <ClInclude Include="external\google\type_traits.h" />
+    <ClInclude Include="external\gtest\fused-src\gtest\gtest.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-death-test.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-message.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-param-test.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-printers.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-spi.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-test-part.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest-typed-test.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest_pred_impl.h" />
+    <ClInclude Include="external\gtest\include\gtest\gtest_prod.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-death-test-internal.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-filepath.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-internal.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-linked_ptr.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-param-util-generated.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-param-util.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-port.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-string.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-tuple.h" />
+    <ClInclude Include="external\gtest\include\gtest\internal\gtest-type-util.h" />
+    <ClInclude Include="external\gtest\samples\prime_tables.h" />
+    <ClInclude Include="external\gtest\samples\sample1.h" />
+    <ClInclude Include="external\gtest\samples\sample2.h" />
+    <ClInclude Include="external\gtest\samples\sample3-inl.h" />
+    <ClInclude Include="external\gtest\samples\sample4.h" />
+    <ClInclude Include="external\gtest\src\gtest-internal-inl.h" />
+    <ClInclude Include="external\gtest\test\gtest-param-test_test.h" />
+    <ClInclude Include="external\gtest\test\gtest-typed-test_test.h" />
+    <ClInclude Include="external\gtest\test\production.h" />
+    <ClInclude Include="external\gtest\xcode\samples\frameworksample\widget.h" />
+    <ClInclude Include="external\miniupnpc\bsdqueue.h" />
+    <ClInclude Include="external\miniupnpc\codelength.h" />
+    <ClInclude Include="external\miniupnpc\connecthostport.h" />
+    <ClInclude Include="external\miniupnpc\declspec.h" />
+    <ClInclude Include="external\miniupnpc\igd_desc_parse.h" />
+    <ClInclude Include="external\miniupnpc\minisoap.h" />
+    <ClInclude Include="external\miniupnpc\minissdpc.h" />
+    <ClInclude Include="external\miniupnpc\miniupnpc.h" />
+    <ClInclude Include="external\miniupnpc\miniupnpctypes.h" />
+    <ClInclude Include="external\miniupnpc\miniwget.h" />
+    <ClInclude Include="external\miniupnpc\minixml.h" />
+    <ClInclude Include="external\miniupnpc\portlistingparse.h" />
+    <ClInclude Include="external\miniupnpc\receivedata.h" />
+    <ClInclude Include="external\miniupnpc\upnpcommands.h" />
+    <ClInclude Include="external\miniupnpc\upnperrors.h" />
+    <ClInclude Include="external\miniupnpc\upnpreplyparse.h" />
+    <ClInclude Include="include\BlockchainExplorerData.h" />
+    <ClInclude Include="include\CryptoNote.h" />
+    <ClInclude Include="include\CryptoTypes.h" />
+    <ClInclude Include="include\IBlockchainExplorer.h" />
+    <ClInclude Include="include\INode.h" />
+    <ClInclude Include="include\IObservable.h" />
+    <ClInclude Include="include\IStreamSerializable.h" />
+    <ClInclude Include="include\ITransaction.h" />
+    <ClInclude Include="include\ITransfersContainer.h" />
+    <ClInclude Include="include\ITransfersSynchronizer.h" />
+    <ClInclude Include="include\IWallet.h" />
+    <ClInclude Include="include\IWalletLegacy.h" />
+    <ClInclude Include="src\blockchainexplorer\BlockchainExplorer.h" />
+    <ClInclude Include="src\blockchainexplorer\BlockchainExplorerDataBuilder.h" />
+    <ClInclude Include="src\blockchainexplorer\BlockchainExplorerErrors.h" />
+    <ClInclude Include="src\common\ArrayRef.h" />
+    <ClInclude Include="src\common\ArrayView.h" />
+    <ClInclude Include="src\common\Base58.h" />
+    <ClInclude Include="src\common\BlockingQueue.h" />
+    <ClInclude Include="src\common\CommandLine.h" />
+    <ClInclude Include="src\common\ConsoleHandler.h" />
+    <ClInclude Include="src\common\ConsoleTools.h" />
+    <ClInclude Include="src\common\FileMappedVector.h" />
+    <ClInclude Include="src\common\IInputStream.h" />
+    <ClInclude Include="src\common\int-util.h" />
+    <ClInclude Include="src\common\IOutputStream.h" />
+    <ClInclude Include="src\common\JsonValue.h" />
+    <ClInclude Include="src\common\Math.h" />
+    <ClInclude Include="src\common\MemoryInputStream.h" />
+    <ClInclude Include="src\common\ObserverManager.h" />
+    <ClInclude Include="src\common\PathTools.h" />
+    <ClInclude Include="src\common\pod-class.h" />
+    <ClInclude Include="src\common\ScopeExit.h" />
+    <ClInclude Include="src\common\ShuffleGenerator.h" />
+    <ClInclude Include="src\common\SignalHandler.h" />
+    <ClInclude Include="src\common\static_assert.h" />
+    <ClInclude Include="src\common\StdInputStream.h" />
+    <ClInclude Include="src\common\StdOutputStream.h" />
+    <ClInclude Include="src\common\StreamTools.h" />
+    <ClInclude Include="src\common\StringBuffer.h" />
+    <ClInclude Include="src\common\StringInputStream.h" />
+    <ClInclude Include="src\common\StringOutputStream.h" />
+    <ClInclude Include="src\common\StringTools.h" />
+    <ClInclude Include="src\common\StringView.h" />
+    <ClInclude Include="src\common\Util.h" />
+    <ClInclude Include="src\common\Varint.h" />
+    <ClInclude Include="src\common\VectorOutputStream.h" />
+    <ClInclude Include="src\CryptoNoteConfig.h" />
+    <ClInclude Include="src\cryptonotecore\Account.h" />
+    <ClInclude Include="src\cryptonotecore\Blockchain.h" />
+    <ClInclude Include="src\cryptonotecore\BlockchainIndices.h" />
+    <ClInclude Include="src\cryptonotecore\BlockchainMessages.h" />
+    <ClInclude Include="src\cryptonotecore\BlockIndex.h" />
+    <ClInclude Include="src\cryptonotecore\Checkpoints.h" />
+    <ClInclude Include="src\cryptonotecore\Core.h" />
+    <ClInclude Include="src\cryptonotecore\CoreConfig.h" />
+    <ClInclude Include="src\cryptonotecore\CryptoNoteBasic.h" />
+    <ClInclude Include="src\cryptonotecore\CryptoNoteBasicImpl.h" />
+    <ClInclude Include="src\cryptonotecore\CryptoNoteFormatUtils.h" />
+    <ClInclude Include="src\cryptonotecore\CryptoNoteSerialization.h" />
+    <ClInclude Include="src\cryptonotecore\CryptoNoteStatInfo.h" />
+    <ClInclude Include="src\cryptonotecore\CryptoNoteTools.h" />
+    <ClInclude Include="src\cryptonotecore\Currency.h" />
+    <ClInclude Include="src\cryptonotecore\Difficulty.h" />
+    <ClInclude Include="src\cryptonotecore\IBlock.h" />
+    <ClInclude Include="src\cryptonotecore\IBlockchainStorageObserver.h" />
+    <ClInclude Include="src\cryptonotecore\ICore.h" />
+    <ClInclude Include="src\cryptonotecore\ICoreObserver.h" />
+    <ClInclude Include="src\cryptonotecore\IMinerHandler.h" />
+    <ClInclude Include="src\cryptonotecore\IntrusiveLinkedList.h" />
+    <ClInclude Include="src\cryptonotecore\ITimeProvider.h" />
+    <ClInclude Include="src\cryptonotecore\ITransactionValidator.h" />
+    <ClInclude Include="src\cryptonotecore\ITxPoolObserver.h" />
+    <ClInclude Include="src\cryptonotecore\MessageQueue.h" />
+    <ClInclude Include="src\cryptonotecore\Miner.h" />
+    <ClInclude Include="src\cryptonotecore\MinerConfig.h" />
+    <ClInclude Include="src\cryptonotecore\OnceInInterval.h" />
+    <ClInclude Include="src\cryptonotecore\SwappedMap.h" />
+    <ClInclude Include="src\cryptonotecore\SwappedVector.h" />
+    <ClInclude Include="src\cryptonotecore\TransactionApi.h" />
+    <ClInclude Include="src\cryptonotecore\TransactionApiExtra.h" />
+    <ClInclude Include="src\cryptonotecore\TransactionExtra.h" />
+    <ClInclude Include="src\cryptonotecore\TransactionPool.h" />
+    <ClInclude Include="src\cryptonotecore\TransactionUtils.h" />
+    <ClInclude Include="src\cryptonotecore\UpgradeDetector.h" />
+    <ClInclude Include="src\cryptonotecore\VerificationContext.h" />
+    <ClInclude Include="src\cryptonoteprotocol\CryptoNoteProtocolDefinitions.h" />
+    <ClInclude Include="src\cryptonoteprotocol\CryptoNoteProtocolHandler.h" />
+    <ClInclude Include="src\cryptonoteprotocol\CryptoNoteProtocolHandlerCommon.h" />
+    <ClInclude Include="src\cryptonoteprotocol\ICryptoNoteProtocolObserver.h" />
+    <ClInclude Include="src\cryptonoteprotocol\ICryptoNoteProtocolQuery.h" />
+    <ClInclude Include="src\crypto\aesb.h" />
+    <ClInclude Include="src\crypto\blake256.h" />
+    <ClInclude Include="src\crypto\chacha8.h" />
+    <ClInclude Include="src\crypto\crypto-ops.h" />
+    <ClInclude Include="src\crypto\crypto.h" />
+    <ClInclude Include="src\crypto\generic-ops.h" />
+    <ClInclude Include="src\crypto\groestl.h" />
+    <ClInclude Include="src\crypto\groestl_tables.h" />
+    <ClInclude Include="src\crypto\hash-ops.h" />
+    <ClInclude Include="src\crypto\hash.h" />
+    <ClInclude Include="src\crypto\initializer.h" />
+    <ClInclude Include="src\crypto\jh.h" />
+    <ClInclude Include="src\crypto\keccak.h" />
+    <ClInclude Include="src\crypto\oaes_config.h" />
+    <ClInclude Include="src\crypto\oaes_lib.h" />
+    <ClInclude Include="src\crypto\random.h" />
+    <ClInclude Include="src\crypto\skein.h" />
+    <ClInclude Include="src\crypto\skein_port.h" />
+    <ClInclude Include="src\daemon\DaemonCommandsHandler.h" />
+    <ClInclude Include="src\http\HttpParser.h" />
+    <ClInclude Include="src\http\HttpParserErrorCodes.h" />
+    <ClInclude Include="src\http\HttpRequest.h" />
+    <ClInclude Include="src\http\HttpResponse.h" />
+    <ClInclude Include="src\inprocessnode\InProcessNode.h" />
+    <ClInclude Include="src\inprocessnode\InProcessNodeErrors.h" />
+    <ClInclude Include="src\jsonrpcserver\JsonRpcServer.h" />
+    <ClInclude Include="src\logging\CommonLogger.h" />
+    <ClInclude Include="src\logging\ConsoleLogger.h" />
+    <ClInclude Include="src\logging\FileLogger.h" />
+    <ClInclude Include="src\logging\ILogger.h" />
+    <ClInclude Include="src\logging\LoggerGroup.h" />
+    <ClInclude Include="src\logging\LoggerManager.h" />
+    <ClInclude Include="src\logging\LoggerMessage.h" />
+    <ClInclude Include="src\logging\LoggerRef.h" />
+    <ClInclude Include="src\logging\StreamLogger.h" />
+    <ClInclude Include="src\miner\BlockchainMonitor.h" />
+    <ClInclude Include="src\miner\Miner.h" />
+    <ClInclude Include="src\miner\MinerEvent.h" />
+    <ClInclude Include="src\miner\MinerManager.h" />
+    <ClInclude Include="src\miner\MiningConfig.h" />
+    <ClInclude Include="src\mnemonics\chinese_simplified.h" />
+    <ClInclude Include="src\mnemonics\dutch.h" />
+    <ClInclude Include="src\mnemonics\electrum-words.h" />
+    <ClInclude Include="src\mnemonics\english.h" />
+    <ClInclude Include="src\mnemonics\french.h" />
+    <ClInclude Include="src\mnemonics\german.h" />
+    <ClInclude Include="src\mnemonics\italian.h" />
+    <ClInclude Include="src\mnemonics\japanese.h" />
+    <ClInclude Include="src\mnemonics\language_base.h" />
+    <ClInclude Include="src\mnemonics\polish.h" />
+    <ClInclude Include="src\mnemonics\portuguese.h" />
+    <ClInclude Include="src\mnemonics\russian.h" />
+    <ClInclude Include="src\mnemonics\singleton.h" />
+    <ClInclude Include="src\mnemonics\spanish.h" />
+    <ClInclude Include="src\mnemonics\ukrainian.h" />
+    <ClInclude Include="src\noderpcproxy\NodeErrors.h" />
+    <ClInclude Include="src\noderpcproxy\NodeRpcProxy.h" />
+    <ClInclude Include="src\p2p\ConnectionContext.h" />
+    <ClInclude Include="src\p2p\IP2pNodeInternal.h" />
+    <ClInclude Include="src\p2p\LevinProtocol.h" />
+    <ClInclude Include="src\p2p\NetNode.h" />
+    <ClInclude Include="src\p2p\NetNodeCommon.h" />
+    <ClInclude Include="src\p2p\NetNodeConfig.h" />
+    <ClInclude Include="src\p2p\P2pConnectionProxy.h" />
+    <ClInclude Include="src\p2p\P2pContext.h" />
+    <ClInclude Include="src\p2p\P2pContextOwner.h" />
+    <ClInclude Include="src\p2p\P2pInterfaces.h" />
+    <ClInclude Include="src\p2p\P2pNetworks.h" />
+    <ClInclude Include="src\p2p\P2pNode.h" />
+    <ClInclude Include="src\p2p\P2pNodeConfig.h" />
+    <ClInclude Include="src\p2p\P2pProtocolDefinitions.h" />
+    <ClInclude Include="src\p2p\P2pProtocolTypes.h" />
+    <ClInclude Include="src\p2p\PeerListManager.h" />
+    <ClInclude Include="src\paymentgateservice\ConfigurationManager.h" />
+    <ClInclude Include="src\paymentgateservice\PaymentGateService.h" />
+    <ClInclude Include="src\paymentgateservice\PaymentServiceConfiguration.h" />
+    <ClInclude Include="src\paymentgateservice\RpcNodeConfiguration.h" />
+    <ClInclude Include="src\paymentgate\NodeFactory.h" />
+    <ClInclude Include="src\paymentgate\PaymentServiceJsonRpcMessages.h" />
+    <ClInclude Include="src\paymentgate\PaymentServiceJsonRpcServer.h" />
+    <ClInclude Include="src\paymentgate\WalletService.h" />
+    <ClInclude Include="src\paymentgate\WalletServiceErrorCategory.h" />
+    <ClInclude Include="src\platform\linux\system\Dispatcher.h" />
+    <ClInclude Include="src\platform\linux\system\ErrorMessage.h" />
+    <ClInclude Include="src\platform\linux\system\Future.h" />
+    <ClInclude Include="src\platform\linux\system\Ipv4Resolver.h" />
+    <ClInclude Include="src\platform\linux\system\TcpConnection.h" />
+    <ClInclude Include="src\platform\linux\system\TcpConnector.h" />
+    <ClInclude Include="src\platform\linux\system\TcpListener.h" />
+    <ClInclude Include="src\platform\linux\system\Timer.h" />
+    <ClInclude Include="src\platform\mingw\alloca.h" />
+    <ClInclude Include="src\platform\msc\alloca.h" />
+    <ClInclude Include="src\platform\msc\stdbool.h" />
+    <ClInclude Include="src\platform\msc\sys\param.h" />
+    <ClInclude Include="src\platform\osx\system\Context.h" />
+    <ClInclude Include="src\platform\osx\system\Dispatcher.h" />
+    <ClInclude Include="src\platform\osx\system\ErrorMessage.h" />
+    <ClInclude Include="src\platform\osx\system\Future.h" />
+    <ClInclude Include="src\platform\osx\system\Ipv4Resolver.h" />
+    <ClInclude Include="src\platform\osx\system\TcpConnection.h" />
+    <ClInclude Include="src\platform\osx\system\TcpConnector.h" />
+    <ClInclude Include="src\platform\osx\system\TcpListener.h" />
+    <ClInclude Include="src\platform\osx\system\Timer.h" />
+    <ClInclude Include="src\platform\posix\system\MemoryMappedFile.h" />
+    <ClInclude Include="src\platform\windows\system\Dispatcher.h" />
+    <ClInclude Include="src\platform\windows\system\ErrorMessage.h" />
+    <ClInclude Include="src\platform\windows\system\Future.h" />
+    <ClInclude Include="src\platform\windows\system\Ipv4Resolver.h" />
+    <ClInclude Include="src\platform\windows\system\MemoryMappedFile.h" />
+    <ClInclude Include="src\platform\windows\system\TcpConnection.h" />
+    <ClInclude Include="src\platform\windows\system\TcpConnector.h" />
+    <ClInclude Include="src\platform\windows\system\TcpListener.h" />
+    <ClInclude Include="src\platform\windows\system\Timer.h" />
+    <ClInclude Include="src\rpc\CoreRpcServerCommandsDefinitions.h" />
+    <ClInclude Include="src\rpc\CoreRpcServerErrorCodes.h" />
+    <ClInclude Include="src\rpc\HttpClient.h" />
+    <ClInclude Include="src\rpc\HttpServer.h" />
+    <ClInclude Include="src\rpc\JsonRpc.h" />
+    <ClInclude Include="src\rpc\RpcServer.h" />
+    <ClInclude Include="src\rpc\RpcServerConfig.h" />
+    <ClInclude Include="src\serialization\BinaryInputStreamSerializer.h" />
+    <ClInclude Include="src\serialization\BinaryOutputStreamSerializer.h" />
+    <ClInclude Include="src\serialization\BinarySerializationTools.h" />
+    <ClInclude Include="src\serialization\ISerializer.h" />
+    <ClInclude Include="src\serialization\IStream.h" />
+    <ClInclude Include="src\serialization\JsonInputStreamSerializer.h" />
+    <ClInclude Include="src\serialization\JsonInputValueSerializer.h" />
+    <ClInclude Include="src\serialization\JsonOutputStreamSerializer.h" />
+    <ClInclude Include="src\serialization\KVBinaryCommon.h" />
+    <ClInclude Include="src\serialization\KVBinaryInputStreamSerializer.h" />
+    <ClInclude Include="src\serialization\KVBinaryOutputStreamSerializer.h" />
+    <ClInclude Include="src\serialization\MemoryStream.h" />
+    <ClInclude Include="src\serialization\SerializationOverloads.h" />
+    <ClInclude Include="src\serialization\SerializationTools.h" />
+    <ClInclude Include="src\simplewallet\PasswordContainer.h" />
+    <ClInclude Include="src\simplewallet\SimpleWallet.h" />
+    <ClInclude Include="src\system\Context.h" />
+    <ClInclude Include="src\system\ContextGroup.h" />
+    <ClInclude Include="src\system\ContextGroupTimeout.h" />
+    <ClInclude Include="src\system\Event.h" />
+    <ClInclude Include="src\system\EventLock.h" />
+    <ClInclude Include="src\system\InterruptedException.h" />
+    <ClInclude Include="src\system\Ipv4Address.h" />
+    <ClInclude Include="src\system\OperationTimeout.h" />
+    <ClInclude Include="src\system\RemoteContext.h" />
+    <ClInclude Include="src\system\RemoteEventLock.h" />
+    <ClInclude Include="src\system\TcpStream.h" />
+    <ClInclude Include="src\transfers\BlockchainSynchronizer.h" />
+    <ClInclude Include="src\transfers\CommonTypes.h" />
+    <ClInclude Include="src\transfers\IBlockchainSynchronizer.h" />
+    <ClInclude Include="src\transfers\IObservableImpl.h" />
+    <ClInclude Include="src\transfers\SynchronizationState.h" />
+    <ClInclude Include="src\transfers\TransfersConsumer.h" />
+    <ClInclude Include="src\transfers\TransfersContainer.h" />
+    <ClInclude Include="src\transfers\TransfersSubscription.h" />
+    <ClInclude Include="src\transfers\TransfersSynchronizer.h" />
+    <ClInclude Include="src\transfers\TypeHelpers.h" />
+    <ClInclude Include="src\walletlegacy\KeysStorage.h" />
+    <ClInclude Include="src\walletlegacy\WalletHelper.h" />
+    <ClInclude Include="src\walletlegacy\WalletLegacy.h" />
+    <ClInclude Include="src\walletlegacy\WalletLegacyEvent.h" />
+    <ClInclude Include="src\walletlegacy\WalletLegacySerialization.h" />
+    <ClInclude Include="src\walletlegacy\WalletLegacySerializer.h" />
+    <ClInclude Include="src\walletlegacy\WalletRequest.h" />
+    <ClInclude Include="src\walletlegacy\WalletSendTransactionContext.h" />
+    <ClInclude Include="src\walletlegacy\WalletTransactionSender.h" />
+    <ClInclude Include="src\walletlegacy\WalletUnconfirmedTransactions.h" />
+    <ClInclude Include="src\walletlegacy\WalletUserTransactionsCache.h" />
+    <ClInclude Include="src\walletlegacy\WalletUtils.h" />
+    <ClInclude Include="src\wallet\IFusionManager.h" />
+    <ClInclude Include="src\wallet\LegacyKeysImporter.h" />
+    <ClInclude Include="src\wallet\WalletAsyncContextCounter.h" />
+    <ClInclude Include="src\wallet\WalletErrors.h" />
+    <ClInclude Include="src\wallet\WalletGreen.h" />
+    <ClInclude Include="src\wallet\WalletIndices.h" />
+    <ClInclude Include="src\wallet\WalletRpcServer.h" />
+    <ClInclude Include="src\wallet\WalletRpcServerCommandsDefinitions.h" />
+    <ClInclude Include="src\wallet\WalletRpcServerErrorCodes.h" />
+    <ClInclude Include="src\wallet\WalletSerializationV1.h" />
+    <ClInclude Include="src\wallet\WalletSerializationV2.h" />
+    <ClInclude Include="src\wallet\WalletUtils.h" />
+    <ClInclude Include="tests\coretests\AccountBoostSerialization.h" />
+    <ClInclude Include="tests\coretests\BlockReward.h" />
+    <ClInclude Include="tests\coretests\BlockValidation.h" />
+    <ClInclude Include="tests\coretests\BoostSerializationHelper.h" />
+    <ClInclude Include="tests\coretests\Chaingen.h" />
+    <ClInclude Include="tests\coretests\Chaingen001.h" />
+    <ClInclude Include="tests\coretests\ChainSplit1.h" />
+    <ClInclude Include="tests\coretests\ChainSwitch1.h" />
+    <ClInclude Include="tests\coretests\CryptoNoteBoostSerialization.h" />
+    <ClInclude Include="tests\coretests\DoubleSpend.h" />
+    <ClInclude Include="tests\coretests\IntegerOverflow.h" />
+    <ClInclude Include="tests\coretests\RandomOuts.h" />
+    <ClInclude Include="tests\coretests\RingSignature.h" />
+    <ClInclude Include="tests\coretests\TestGenerator.h" />
+    <ClInclude Include="tests\coretests\TransactionBuilder.h" />
+    <ClInclude Include="tests\coretests\TransactionTests.h" />
+    <ClInclude Include="tests\coretests\TransactionValidation.h" />
+    <ClInclude Include="tests\coretests\UnorderedContainersBoostSerialization.h" />
+    <ClInclude Include="tests\coretests\Upgrade.h" />
+    <ClInclude Include="tests\crypto\crypto-tests.h" />
+    <ClInclude Include="tests\integrationtestlib\BaseFunctionalTests.h" />
+    <ClInclude Include="tests\integrationtestlib\InProcTestNode.h" />
+    <ClInclude Include="tests\integrationtestlib\Logger.h" />
+    <ClInclude Include="tests\integrationtestlib\NetworkConfiguration.h" />
+    <ClInclude Include="tests\integrationtestlib\NodeCallback.h" />
+    <ClInclude Include="tests\integrationtestlib\NodeObserver.h" />
+    <ClInclude Include="tests\integrationtestlib\ObservableValue.h" />
+    <ClInclude Include="tests\integrationtestlib\Process.h" />
+    <ClInclude Include="tests\integrationtestlib\RPCTestNode.h" />
+    <ClInclude Include="tests\integrationtestlib\TestNetwork.h" />
+    <ClInclude Include="tests\integrationtestlib\TestNode.h" />
+    <ClInclude Include="tests\integrationtestlib\TestWalletLegacy.h" />
+    <ClInclude Include="tests\integrationtests\BaseTests.h" />
+    <ClInclude Include="tests\integrationtests\WalletLegacyObserver.h" />
+    <ClInclude Include="tests\Io.h" />
+    <ClInclude Include="tests\performancetests\CheckRingSignature.h" />
+    <ClInclude Include="tests\performancetests\ConstructTransaction.h" />
+    <ClInclude Include="tests\performancetests\CryptoNoteSlowHash.h" />
+    <ClInclude Include="tests\performancetests\DerivePublicKey.h" />
+    <ClInclude Include="tests\performancetests\DeriveSecretKey.h" />
+    <ClInclude Include="tests\performancetests\GenerateKeyDerivation.h" />
+    <ClInclude Include="tests\performancetests\GenerateKeyImage.h" />
+    <ClInclude Include="tests\performancetests\GenerateKeyImageHelper.h" />
+    <ClInclude Include="tests\performancetests\IsOutToAccount.h" />
+    <ClInclude Include="tests\performancetests\MultiTransactionTestBase.h" />
+    <ClInclude Include="tests\performancetests\PerformanceTests.h" />
+    <ClInclude Include="tests\performancetests\PerformanceUtils.h" />
+    <ClInclude Include="tests\performancetests\SingleTransactionTestBase.h" />
+    <ClInclude Include="tests\testgenerator\TestGenerator.h" />
+    <ClInclude Include="tests\transferstests\Globals.h" />
+    <ClInclude Include="tests\unittests\EventWaiter.h" />
+    <ClInclude Include="tests\unittests\ICoreStub.h" />
+    <ClInclude Include="tests\unittests\ICryptoNoteProtocolQueryStub.h" />
+    <ClInclude Include="tests\unittests\INodeStubs.h" />
+    <ClInclude Include="tests\unittests\TestBlockchainGenerator.h" />
+    <ClInclude Include="tests\unittests\TransactionApiHelpers.h" />
+    <ClInclude Include="tests\unittests\TransfersObserver.h" />
+    <ClInclude Include="tests\unittests\UnitTestsUtils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
